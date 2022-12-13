@@ -13,7 +13,7 @@ a{ text-decoration: none; color:inherit;}
 .head {width:1000px; text-align: right; line-height: 36px; }
 .mainmenu1{height:70px; width:1000px; text-align: right;border-bottom: 1px solid #ccc;}
 
-.menu {width: 99%; border-bottom:1px solid #ccc;}
+.menu {width: 99%; border-bottom:1px solid #ccc;margin-top: 20px;}
 .mainmenu2{
 	display:block;
 	height:70px;
@@ -78,22 +78,33 @@ a{ text-decoration: none; color:inherit;}
 
 
 .slider_main{
- height: 550px;
- width: 100%;
+ height: 600px;
+ width: 1600px;
  flex-wrap: wrap;
  }
  
  
-.slider_main_img > img {height: 550px;}
-.container{margin: 0 auto;width:1600px;}
+.slider_main_img > img {height: 600px;}
+.container{margin: 0 auto;width:1000px; height: 100%}
 
+.boardn{width: 460px; height: 347px;background-color: yellow;float: left;}
+.quick{width: 460px; height: 347px; background-color: red; float:right;}
+
+
+#wrap{width:100%;max-width:1000px; margin:0 auto;}
+.program{width: 270; height: 350px;}
 </style>
-
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"> -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 <script>
  	$(document).ready(function() {
-		$('.slider_main').bxSlider();
+		$('.slider_main').bxSlider({
+			 auto: true,
+			 autoControls: true,
+			 stopAutoOnClick: true,
+			 pager: true,
+		});
 	});
  	
  	$(document).ready(function() {
@@ -108,22 +119,33 @@ a{ text-decoration: none; color:inherit;}
 			$('.sub1').removeClass('dropmenu');
 		});
 	});
- 	
- 
- 
+
 </script>
+
+<link rel="stylesheet" href="css/jquery.bxslider.css" />
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/jquery.bxslider.js"></script>
+<script>
+$(function(){
+ $('.slider').bxSlider({
+   auto:true,
+   moveSlides:1, //한번움직일때 한장씩
+   minSlides:1,  //반응형일때 대응한다.
+   maxSlides:4, //pc크기
+   slideWidth:230,
+   slideMargin:20,
+  });
+});
+
+</script>
+
 </head>
 
 <body>
-<div style="width: 99%; border-bottom: 1px solid #ccc;">
+<div style="width: 99%; margin-top: 20px;">
 <div class="head">
 	<a href="/sae_member/login">로그인</a> |
 	<a href="/sae_member/register">회원가입</a> &nbsp;
-	
-
-<%-- 	<a href="http://www.mois.go.kr/frt/sub/popup/p_taegugki_banner/screen.do" target="_blank">
-			<img src="<spring:url value='/resources/img/korea.png'/>" style="width:127px;"></a>
- --%>
 </div>
 </div>
 
@@ -134,7 +156,7 @@ a{ text-decoration: none; color:inherit;}
 			<img src="<spring:url value='/resources/img/logo.png'/>"style="height:40px;">
 	</div>
 	
-	<div style="height: 70px;">
+	<div style="height: 70px;padding-right: 56px;">
 	<ul class="mainmenu2">
 		<li><div class="li">관람안내</div></li>
 		<li><div class="li">관람예약</div></li>
@@ -207,9 +229,25 @@ a{ text-decoration: none; color:inherit;}
 	</div>
 </div>
 <div class="container">
-	<div class="contents">
-		
+	<div class="contents" style="margin-top: 20px; height: 400px;">
+		<div class="boardn">공지사항</div>
+		<div class="quick">바로가기버튼</div>
 	</div>	
+	
+	<div id="wrap">
+  	  <section class="section1">
+  	   <ul class="slider">
+         <li class="program" style="background-color: black;"><a href="#">프로그램</a></li>
+ 	     <li class="program" style="background-color: blue;"><a href="#">프로그램</a></li>
+ 	     <li class="program" style="background-color: orange;"><a href="#">프로그램</a></li>
+ 	     <li class="program" style="background-color: purple;"><a href="#">프로그램</a></li>
+ 	     <li class="program" style="background-color: pink;"><a href="#">프로그램</a></li>
+       </ul>
+ 	  </section>
+    </div>
+	<div>
+	굿즈??? 한복????  온라인 상영관도 있지~~
+	</div>
 	
 	
 	
@@ -217,6 +255,6 @@ a{ text-decoration: none; color:inherit;}
 	
 
 </div>	
-<footer></footer>
+<footer>아니면 풋터먼저 고고</footer>
 </body>
 </html>
