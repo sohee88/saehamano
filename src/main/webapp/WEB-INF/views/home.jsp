@@ -77,12 +77,18 @@ a{ text-decoration: none; color:inherit;}
 .dropmenu {opacity:98%;}
 
 
-.slider_main{z-index: -1;width:1800x; position: absolute;}
-
+.slider_main{
+ height: 550px;
+ width: 100%;
+ flex-wrap: wrap;
+ }
+ 
+ 
+.slider_main_img > img {height: 550px;}
 .container{margin: 0 auto;width:1600px;}
 
 </style>
-<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"> -->
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 <script>
@@ -184,23 +190,23 @@ a{ text-decoration: none; color:inherit;}
 	</div>
 </div>
 
-<div class="container">
-
+<div style="justify-content: center; display: flex;flex-wrap: wrap;">
 	<div class="slider_main">
 		<div class="slider_main_img">
-			<img src="<spring:url value='/resources/img/main_slider1.jpg'/>"style="height: 500px;">
+			<img src="<spring:url value='/resources/img/main_slider1.jpg'/>">
 		</div>
 		<div class="slider_main_img">
-			<img src="<spring:url value='/resources/img/main_slider2.jpg'/>"style="height: 500px;">
+			<img src="<spring:url value='/resources/img/main_slider2.jpg'/>">
 		</div>
 		<div class="slider_main_img">
-			<img src="<spring:url value='/resources/img/main_slider3.jpg'/>"style="height: 500px;">
+			<img src="<spring:url value='/resources/img/main_slider3.jpg'/>">
 		</div>
 		<div class="slider_main_img">
-			<img src="<spring:url value='/resources/img/main_slider4.jpg'/>"style="height: 500px;">
+			<img src="<spring:url value='/resources/img/main_slider4.jpg'/>">
 		</div>
 	</div>
-	
+</div>
+<div class="container">
 	<div class="contents">
 		
 	</div>	
